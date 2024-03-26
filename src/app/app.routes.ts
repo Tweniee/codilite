@@ -11,4 +11,5 @@ export const routes: Routes = [
   { path: 'verify-otp', component: OtpComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'code-box', component: CodeBoxComponent },
+  { path: '', redirectTo: 'code-box', pathMatch: 'full' }
 ];
