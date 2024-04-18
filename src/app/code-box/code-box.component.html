@@ -1,41 +1,75 @@
 <header class="main-header">
-    <div class="brand-logo">
-       <a href="javascript:void(0);"><img src="assets/images/logo.png" alt=""></a>
-    </div>
-    <div class="main-header-rgt">
-       <button type="button" data-mode="light" class="mode_btn mode-btn me-1 mode-btn-light"><i class="fas fa-sun"></i></button>
-       <button type="button" data-mode="dark" class="mode_btn mode-btn ms-1 mode-btn-dark"><i class="fas fa-moon"></i></button>
+  <div class="brand-logo">
+    <a href="javascript:void(0);"
+      ><img src="assets/images/logo.png" alt=""
+    /></a>
+  </div>
+  <div class="main-header-rgt">
+    <button
+      type="button"
+      data-mode="light"
+      class="mode_btn mode-btn me-1 mode-btn-light"
+    >
+      <i class="fas fa-sun"></i>
+    </button>
+    <button
+      type="button"
+      data-mode="dark"
+      class="mode_btn mode-btn ms-1 mode-btn-dark"
+    >
+      <i class="fas fa-moon"></i>
+    </button>
     <div class="dropdown">
-    <a href="javascript:void(0);" class="main-btn ms-2 dropdown-toggle" type="button" id="menu" data-bs-toggle="dropdown" aria-expanded="false">
-    C++ (GCC 9.2.0)
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="menu">
-    <li><a class="dropdown-item" href="javascript:void(0);">Option 1</a></li>
-    <li><a class="dropdown-item" href="javascript:void(0);">Option 2</a></li>
-    <li><a class="dropdown-item" href="javascript:void(0);">Option 3</a></li>
-    </ul>
+      <a
+        href="javascript:void(0);"
+        class="main-btn ms-2 dropdown-toggle"
+        type="button"
+        id="menu"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        C++ (GCC 9.2.0)
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="menu">
+        <li>
+          <a class="dropdown-item" href="javascript:void(0);">Option 1</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="javascript:void(0);">Option 2</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="javascript:void(0);">Option 3</a>
+        </li>
+      </ul>
     </div>
-    </div>
- </header>
- <div class="container-fluid">
-    <div class="code-card">
-       <div class="row">
-          <div class="col-lg-9 col-md-8 col-sm-8">
-             <div class="code-card-lft">
-                <textarea name="" id="" class="form-control"></textarea>
-             </div>
+  </div>
+</header>
+<div class="container-fluid">
+  <div class="code-card">
+    <div class="row">
+      <div class="col-lg-9 col-md-8 col-sm-8">
+        <div class="code-card-lft">
+          <!-- <textarea name="" id="" class="form-control"></textarea> -->
+          <ngs-code-editor
+            class="form-control"
+            [theme]="theme"
+            [codeModel]="codeModel"
+            [options]="options"
+            (valueChanged)="onCodeChanged($event)"
+          ></ngs-code-editor>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-4">
+        <div class="out-card">
+          <h3 class="head d-flex justify-content-between">
+            <span>Output</span>
+            <a href="javascript:void(0);" class="main-btn">Run</a>
+          </h3>
+          <div class="code-box">
+            <p>Hello World!</p>
           </div>
-          <div class="col-lg-3 col-md-4 col-sm-4">
-             <div class="out-card">
-                <h3 class="head d-flex justify-content-between">
-                <span>Output</span>
-                <a href="javascript:void(0);" class="main-btn">Run</a>
-                </h3>
-                <div class="code-box">
-                   <p>Hello World!</p>
-                </div>
-             </div>
-          </div>
-       </div>
+        </div>
+      </div>
     </div>
- </div>
+  </div>
+</div>
