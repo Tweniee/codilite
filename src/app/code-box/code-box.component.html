@@ -55,6 +55,7 @@
             [theme]="theme"
             [codeModel]="codeModel"
             [options]="options"
+            (focus)="onCodeFocus()"
             (valueChanged)="onCodeChanged($event)"
           ></ngs-code-editor>
         </div>
@@ -63,10 +64,10 @@
         <div class="out-card">
           <h3 class="head d-flex justify-content-between">
             <span>Output</span>
-            <a href="javascript:void(0);" class="main-btn">Run</a>
+            <a (click)="sendCodeToSocketToCompile()" class="main-btn">Run (Ctrl + r)</a>
           </h3>
           <div class="code-box">
-            <p>Hello World!</p>
+            <p>{{finalCompiledOutput}}</p>
           </div>
         </div>
       </div>

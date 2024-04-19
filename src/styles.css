@@ -46,7 +46,7 @@ button {
 
 p {
    margin-bottom: 0.2rem;
-   font-size: 15px;
+   font-size: 30px;
    font-weight: 500;
    color: #d1d1d1;
    letter-spacing: 0.5px;
@@ -431,7 +431,7 @@ input[type=number] {
 }
 
 .code-box p {
-   color: #00ff00;
+   color: #ffffff;
 }
 
 .stats-innr.stats-rgt ul {
